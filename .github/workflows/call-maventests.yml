@@ -3,9 +3,9 @@
 
 name: Testing maven build by calling reusable workflow
 
-on:
-  pull_request:
-    branches: [ main ]
+on: push
+#  pull_request:
+#    branches: [ main ]
 
 jobs:
   call-workflow-maven-build:
