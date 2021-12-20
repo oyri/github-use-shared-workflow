@@ -31,7 +31,8 @@ server:
     accesslog:
       enabled: true
 
-
+dummy:
+  param: denne-er-enormt-men-under-200-tegn-japp-0000000000000000098888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888shalkjfdssssssssssssssssssssssssssssssssssss
 ---
 spring:
   config:
