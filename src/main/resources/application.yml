@@ -1,5 +1,5 @@
 info:
-  version: @project.version@ # yamllint disable-line
+  version: '@project.version@'
 
 # Spring Boot Actuator
 management:
@@ -32,7 +32,7 @@ server:
       enabled: true
 
 dummy:
-  param: denne-er-enormt-og-over-200-tegn-japp-00000000000------------00000098888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888shalkjfdssssssssssssssssssssssssssssssssssss
+  param: 'denne-er-over-120-men-under-200-tegn-japp-------------0000009888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888shalkjfdssssssssssssssssssssssssssssssssssss'
 ---
 spring:
   config:
