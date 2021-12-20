@@ -26,13 +26,27 @@ management:
 
 ## Tomcat access log
 server:
-  port: 8080
+  port: 7676
   tomcat:
     accesslog:
+      directory: /var/log/app/
       enabled: true
+      prefix: stdout
+      buffered: false
+      suffix:
+      file-date-format:
+      pattern: '%{X-Forwarded-For}i %t "%r" %s %b "%{User-Agent}i" "%{Referer}i" %{traceparent}i'
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true
+
 
 dummy:
-  param: 'denne-er-over-120-men-under-200-tegn-japp-------------0000009888888888888888888888888888888888888888888888888888888888888888888888888'
+  param: 'denne-er-over-120-men-under-150-tegn-japp-------------0000009888888888888888888888888888888888888888888888888888888888888888888888888'
+  url-from-somewhere-else: ${api.base-uri}
 ---
 spring:
   config:
