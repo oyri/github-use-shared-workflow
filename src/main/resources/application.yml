@@ -32,7 +32,7 @@ server:
       enabled: true
 
 dummy:
-  param: 'denne-er-over-120-men-under-200-tegn-japp-------------0000009888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888shalkjfdssssssssssssssssssssssssssssssssssss'
+  param: 'denne-er-over-120-men-under-200-tegn-japp-------------0000009888888888888888888888888888888888888888888888888888888888888888888888888'
 ---
 spring:
   config:
