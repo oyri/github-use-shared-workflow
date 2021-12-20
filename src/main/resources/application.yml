@@ -1,5 +1,5 @@
 info:
-  version: @project.version@
+  version: @project.version@ # yamllint disable-line
 
 # Spring Boot Actuator
 management:
