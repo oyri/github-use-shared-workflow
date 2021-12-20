@@ -1,0 +1,44 @@
+info:
+  version: @project.version@
+
+# Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "health, info, version, prometheus"
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      enabled: true
+      group:
+        liveness:
+          include: livenessProbe
+      probes:
+        enabled: true
+  info:
+    git:
+      mode: full
+    diskspace:
+      enabled: false
+
+## Tomcat access log
+server:
+  port: 8080
+  tomcat:
+    accesslog:
+      enabled: true
+
+
+---
+spring:
+  config:
+    activate:
+      on-cloud-platform: 'kubernetes'
+    import:
+      - 'optional:file:/etc/config/config.yaml'
+      - 'optional:file:/etc/secret/secret.yaml'
+server:
+  port: 8080
