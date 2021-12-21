@@ -9,7 +9,7 @@ on: push
 
 jobs:
   call-workflow-maven-build:
-    uses: felleslosninger/eid-github-workflows/.github/workflows/eid-maven-build.yml@work/ID-1301
+    uses: felleslosninger/eid-github-workflows/.github/workflows/eid-maven-build.yml@work/ID-1317
     secrets:
       maven-user: i-have-nothing
       maven-password: missing
