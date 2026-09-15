@@ -13,7 +13,7 @@ on:
 
 jobs:
   call-workflow-maven-build:
-    uses: felleslosninger/eid-github-workflows/.github/workflows/maven-build.yml@main
+    uses: felleslosninger/github-workflows/.github/workflows/ci-pr-checks-image.yml@main
     secrets:
       maven-user: i-have-nothing
       maven-password: missing
