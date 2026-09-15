@@ -3,13 +3,17 @@
 
 name: Testing maven build by calling reusable workflow
 
-on: push
-#  pull_request:
-#    branches: [ main ]
+on: 
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - '.github/**'
+      - '!src/resources/application.yml'
 
 jobs:
   call-workflow-maven-build:
-    uses: felleslosninger/eid-github-workflows/.github/workflows/eid-maven-build.yml@work/ID-1317
+    uses: felleslosninger/eid-github-workflows/.github/workflows/eid-maven-build.yml@main
     secrets:
       maven-user: i-have-nothing
       maven-password: missing
